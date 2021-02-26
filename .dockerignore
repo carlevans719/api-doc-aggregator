@@ -1,0 +1,4 @@
+public/apis/*
+.git
+node_modules
+slate-inputs/*
