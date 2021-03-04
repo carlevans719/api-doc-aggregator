@@ -53,17 +53,30 @@ async function convertSpecs (specsToConvert) {
   const convertedSpecs = {};
 
   const options = {
+    codeSamples: true,
+    httpsnippet: true,
+    // sample: true,
+    tocSummary: true,
     language_tabs: [
-      { 'shell': 'Shell' },
-      { 'http': 'HTTP' },
-      { 'javascript': 'JavaScript' },
+      'shell',
+      'http',
+      'javascript',
+      'node',
+      'csharp',
+    ],
+    language_clients: [
+      { node: 'request' },
+      { javascript: 'fetch' },
     ],
     toc_footers: [
       { url: '/', description: 'Home' },
       ...Object.keys(specsToConvert)
         .map(name => ({ url: `/${BASE_URL_PATH}/${name}`, description: `${name} API`})),
     ],
-    highlight_theme: 'tulip',
+    theme: 'Github',
+    search: true,
+    includes: ['errors.md'],
+    code_clipboard: true,
   };
 
   for (const name in specsToConvert) {

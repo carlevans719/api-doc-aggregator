@@ -3,6 +3,7 @@ const generate = require('./generator');
 
 const apis = {
   Petstore: 'https://petstore.swagger.io/v2/swagger.json',
+  Users_Microservice: 'https://dev.my.nmite.ac.uk/api/users/api-json',
 };
 
 let currentApis = {};
