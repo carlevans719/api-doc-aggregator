@@ -55,6 +55,7 @@ async function convertSpecs (specsToConvert) {
   const options = {
     codeSamples: true,
     httpsnippet: true,
+    headers: 4,
     // sample: true,
     tocSummary: true,
     language_tabs: [
@@ -75,8 +76,10 @@ async function convertSpecs (specsToConvert) {
     ],
     theme: 'Github',
     search: true,
+    sample: true,
     includes: ['errors.md'],
     code_clipboard: true,
+    user_templates: join(__dirname, 'dot-templates'),
   };
 
   for (const name in specsToConvert) {

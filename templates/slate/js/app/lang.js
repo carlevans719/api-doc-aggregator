@@ -139,7 +139,7 @@ under the License.
       var pre = this;
       $(pre).addClass("highlight");
       $(pre).addClass("tab");
-      var classList = $(pre).attr('class').split(/\s+/);
+      var classList = $(pre).find('code').attr('class').split(/\s+/);
       $.each(classList, function(index, item) {
         if (item.startsWith('language-')) {
           var newClass = item.replace('language-', 'tab-');

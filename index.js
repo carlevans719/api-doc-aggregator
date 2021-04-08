@@ -2,8 +2,7 @@ const express = require('express');
 const generate = require('./generator');
 
 const apis = {
-  Petstore: 'https://petstore.swagger.io/v2/swagger.json',
-  Users_Microservice: 'https://dev.my.nmite.ac.uk/api/users/api-json',
+  TestLocal: 'http://127.0.0.1:3002/api-json',
 };
 
 let currentApis = {};
@@ -23,4 +22,4 @@ app.get('/', (req, res) => {
 
 app.use(express.static('public'));
 
-app.listen(3000, () => console.log('running'));
+app.listen(3001, () => console.log('running'));
