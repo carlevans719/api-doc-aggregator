@@ -1,9 +1,7 @@
 const express = require('express');
 const generate = require('./generator');
 
-const apis = {
-  TestLocal: 'http://127.0.0.1:3002/api-json',
-};
+const apis = JSON.parse(Buffer.from(process.env.APIS, 'base64').toString('utf8'));
 
 let currentApis = {};
 async function updateSpecs () {
